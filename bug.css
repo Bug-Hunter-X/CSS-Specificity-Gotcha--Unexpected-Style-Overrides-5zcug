@@ -1,0 +1,8 @@
+The CSS specificity rules can lead to unexpected behavior when multiple selectors target the same element.  For instance, a more specific selector might unintentionally override a style defined by a less specific selector, even if the order seems to suggest otherwise.  This is especially tricky when dealing with nested selectors and the use of `!important`. For example:
+
+```css
+div p { color: blue; }
+div#myDiv p { color: red; }
+```
+
+In this case, `div#myDiv p` has higher specificity than `div p` so the paragraph text inside `div#myDiv` will be red, regardless of the order in which they are declared.
