@@ -1,0 +1,10 @@
+To fix this, either increase the specificity of the less-specific selector or be extremely careful about the order and specificity of selectors.  Sometimes restructuring the HTML to avoid conflicts is a better long-term solution.
+
+One possible solution is to make use of a more specific selector to ensure your styles have priority: 
+
+```css
+div p { color: blue; }
+div#myDiv p { color: red !important; /* Use !important sparingly */}
+```
+
+Note: Using `!important` should be a last resort.  It overrides specificity rules and can make your CSS harder to maintain. Prefer to refactor your HTML or adjust selectors for a cleaner solution.
